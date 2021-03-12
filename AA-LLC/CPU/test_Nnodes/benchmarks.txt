@@ -1,0 +1,22 @@
+.........................
+
+Using 128 MPI processes
+128.7 ns/day
+.........................  
+
+Using 256 MPI processes
+204.9 ns/day
+.........................  
+
+Using 640 MPI processes
+168.0 ns/day
+.........................  
+
+Using 384 MPI processes
+184.7 ns/day
+.........................  
+
+Using 512 MPI processes
+238.0 ns/day
+.........................  
+

@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH -N 1 --ntasks-per-node 5
+#SBATCH -t 00:5:00
+#SBATCH -p GPU-small --gres=gpu:1
+#SBATCH -J 'G1'
+
+module load cuda
+module load gcc/10.2.0
+module load openmpi/3.1.6-gcc10.2.0
+source /jet/home/susa/pkgs/gromacs/2020.5_gpu/bin/GMXRC
+
+export GMX_MAXBACKUP=-1  # do not make back-ups
+
+
+mpirun -np 1 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  G1_np1_nomp4.log  -ntomp 4
+mpirun -np 2 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  G1_np2_nomp2.log  -ntomp 2
+mpirun -np 4 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  G1_np4_nomp1.log  -ntomp 1
+mpirun -np 5 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  G1_np5_nomp1.log  -ntomp 1

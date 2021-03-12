@@ -1,0 +1,33 @@
+title = NPT simulation of initial.gro at 343.0 K
+integrator = md
+dt = 0.002
+nsteps = 50000 ; 100 ps
+
+nstenergy = 5000 ; 10 ps
+nstlist = 40
+nstype = grid
+nstxout-compressed=5000 ; 10 ps
+
+continuation = no
+constraints = h-bonds
+constraint-algorithm = lincs
+cutoff-scheme = Verlet
+
+vdwtype = cutoff
+vdw-modifier= Potential-shift-verlet
+coulombtype = PME
+
+Tcoupl = v-rescale
+tc-grps = system
+tau-t = 0.1
+ref-t = 343.0
+Pcoupl = berendsen
+Pcoupltype = isotropic
+ref-p = 1 1
+compressibility = 4.5e-5 4.5e-5
+
+gen-vel = yes
+gen-temp = 343.0
+pbc = xyz
+DispCorr = EnerPres
+refcoord-scaling = all

@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -N 1 --ntasks-per-node 128
+#SBATCH -t 00:60:00
+#SBATCH -p RM-small
+#SBATCH -J 'RM'
+
+
+module load gcc/10.2.0
+module load openmpi/3.1.6-gcc10.2.0
+source /jet/home/susa/pkgs/gromacs/2020.5_cpu/bin/GMXRC
+
+export GMX_MAXBACKUP=-1  # do not make back-ups
+
+#mpirun -np 128 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  N1_np128_nomp1.log  -ntomp 1
+#mpirun -np 64 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  N1_np64_nomp2.log  -ntomp 2
+#mpirun -np 32 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  N1_np32_nomp4.log  -ntomp 4
+#mpirun -np 16 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  N1_np16_nomp8.log  -ntomp 8
+#mpirun -np 8 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  N1_np8_nomp16.log  -ntomp 16
+#mpirun -np 4 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  N1_np4_nomp32.log  -ntomp 32
+mpirun -np 2 gmx_mpi mdrun -v -s ../npt.tpr -o npt -g  N1_np2_nomp64.log  -ntomp 64
+
+
+             
+
+
+
+
+
+

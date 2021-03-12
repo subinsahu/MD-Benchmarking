@@ -1,0 +1,68 @@
+                      :-) GROMACS - gmx grompp, 2020.5 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2020.5
+Executable:   /jet/home/susa/pkgs/gromacs/2020.5_cpu/bin/gmx_mpi
+Data prefix:  /jet/home/susa/pkgs/gromacs/2020.5_cpu
+Working dir:  /ocean/projects/cts160011p/susa/benchmark/Bridges2/scaling_test/AA/cpu
+Command line:
+  gmx_mpi grompp -f ../npt.mdp -p topol.top -c ../npt0.gro -o npt
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'nstype'
+Setting the LD random seed to 1164834558
+Generated 1081 of the 1081 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 1081 of the 1081 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'MOL'
+turning H bonds into constraints...
+Excluding 1 bonded neighbours molecule type 'BR'
+turning H bonds into constraints...
+Excluding 3 bonded neighbours molecule type 'GLY'
+turning H bonds into constraints...
+Setting gen_seed to -301990081
+Velocities were taken from a Maxwell distribution at 343 K
+Analysing residue names:
+There are:   424      Other residues
+There are:   848        Ion residues
+There are:  1089    Protein residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Analysing Protein...
+Number of degrees of freedom in T-Coupling group System is 176943.00
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 343 K
+Calculated rlist for 1x1 atom pair-list as 1.127 nm, buffer size 0.127 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.004 nm, buffer size 0.004 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 80x80x80, spacing 0.112 0.112 0.112
+Estimate for the relative computational load of the PME mesh part: 0.22
+This run will generate roughly 10 Mb of data
+
+GROMACS reminds you: "Lunatics On Pogo Sticks" (Red Hot Chili Peppers)
+

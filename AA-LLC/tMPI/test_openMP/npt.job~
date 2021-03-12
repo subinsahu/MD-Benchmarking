@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -N 1 --ntasks-per-node 128
+#SBATCH -t 00:60:00
+#SBATCH -p RM-small
+#SBATCH -J 'RM'
+
+
+module load gcc
+source /jet/home/susa/pkgs/gromacs/2020.5/bin/GMXRC
+
+export GMX_MAXBACKUP=-1  # do not make back-ups
+
+gmx mdrun -v -s ../npt.tpr -o npt -g  N1_np128_nomp.log  -ntomp 1
+gmx mdrun -v -s ../npt.tpr -o npt -g  N1_np64_nomp2.log  -ntomp 2
+gmx mdrun -v -s ../npt.tpr -o npt -g  N1_np32_nomp4.log  -ntomp 4
+gmx mdrun -v -s ../npt.tpr -o npt -g  N1_np16_nomp8.log  -ntomp 8
+gmx mdrun -v -s ../npt.tpr -o npt -g  N1_np8_nomp16.log  -ntomp 16
+gmx mdrun -v -s ../npt.tpr -o npt -g  N1_np4_nomp32.log  -ntomp 32
+gmx mdrun -v -s ../npt.tpr -o npt -g  N1_np2_nomp64.log  -ntomp 64
+
+
+             

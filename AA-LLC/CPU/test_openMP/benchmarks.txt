@@ -1,0 +1,37 @@
+.........................
+
+Using 128 MPI processes
+Using 1 OpenMP thread per MPI process
+122.1 ns/day
+.........................  
+
+Using 16 MPI processes
+Using 8 OpenMP threads per MPI process
+64.9 ns/day
+.........................  
+
+Using 2 MPI processes
+Using 64 OpenMP threads per MPI process
+3.0 ns/day
+.........................  
+
+Using 32 MPI processes
+Using 4 OpenMP threads per MPI process
+94.5 ns/day
+.........................  
+
+Using 4 MPI processes
+Using 32 OpenMP threads per MPI process
+46.4 ns/day
+.........................  
+
+Using 64 MPI processes
+Using 2 OpenMP threads per MPI process
+97.6 ns/day
+.........................  
+
+Using 8 MPI processes
+Using 16 OpenMP threads per MPI process
+65.7 ns/day
+.........................  
+

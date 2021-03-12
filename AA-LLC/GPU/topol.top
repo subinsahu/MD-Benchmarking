@@ -1,0 +1,20 @@
+;Forcefield
+#include "../top/gaff.itp"
+
+;MOL Topology
+#include "../top/MOL.itp"
+
+;Ion Topology
+#include "../top/ions.itp"
+
+;GLY Topology
+#include "../top/GLY.itp"
+
+[ system ]
+Simulation Box
+
+[ molecules ]
+;Compounds     nmols
+MOL              424
+BR               848
+GLY             1089

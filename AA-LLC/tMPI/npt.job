@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -N 1 --ntasks-per-node 128
+#SBATCH -t 00:30:00
+#SBATCH -p RM
+#SBATCH -J 'test'
+
+#module load intel
+module load gcc
+source /jet/home/susa/pkgs/gromacs/2020.5/bin/GMXRC
+
+
+# remove previous
+rm nvt.tpr
+
+export GMX_MAXBACKUP=-1  # do not make back-ups
+gmx grompp -f ../npt.mdp -p ../topol.top -c ../nvt.gro -o npt
+
+gmx mdrun -v -s npt.tpr -o npt -g  nt2_nomp1.log  -nt 2 -ntomp 1
+gmx mdrun -v -s npt.tpr -o npt -g  nt2_nomp2.log  -nt 2 -ntomp 2
+
+
+
+
+
+

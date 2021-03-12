@@ -1,0 +1,9 @@
+#!/bin/bash
+
+fls=`ls *.log`
+for fl in $fls; do
+    grep "MPI process" $fl | head -1
+    grep "OpenMP thread" $fl | head -1
+    tail -3 $fl | awk '$1=="Performance:" {printf "%.1f ns/day\n\n", $2}'
+done
+
