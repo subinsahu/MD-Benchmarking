@@ -9,7 +9,7 @@ Using 16 MPI threads
 .........................  
 
 Using 1 MPI thread
-
+2.6 ns/day
 .........................  
 
 Using 2 MPI threads
