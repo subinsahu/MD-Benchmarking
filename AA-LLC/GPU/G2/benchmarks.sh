@@ -12,3 +12,12 @@ cat $out
 
 
 
+list='benchmarks.dat'
+printf '#MPI \t ns/day\n' > temp.dat
+
+awk '($3=="MPI") {printf "%d \t", $2}
+     ($2=="ns/day") {printf "%.1f \n", $1}' $out >> temp.dat
+
+sort -nk1 temp.dat  > $list
+
+cat $list

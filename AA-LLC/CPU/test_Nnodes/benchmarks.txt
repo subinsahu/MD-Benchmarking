@@ -1,21 +1,26 @@
 .........................
 
+Running on 1 node with total 128 cores, 128 logical cores
 Using 128 MPI processes
 128.7 ns/day
 .........................  
 
+Running on 2 nodes with total 256 cores, 256 logical cores
 Using 256 MPI processes
 204.9 ns/day
 .........................  
 
+Running on 5 nodes with total 640 cores, 640 logical cores
 Using 640 MPI processes
 168.0 ns/day
 .........................  
 
+Running on 3 nodes with total 384 cores, 384 logical cores
 Using 384 MPI processes
 184.7 ns/day
 .........................  
 
+Running on 4 nodes with total 512 cores, 512 logical cores
 Using 512 MPI processes
 238.0 ns/day
 .........................  

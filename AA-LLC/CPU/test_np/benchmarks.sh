@@ -10,3 +10,15 @@ for fl in $fls; do
 done
 
 cat $out
+
+list='benchmarks.dat'
+
+printf '#NP \t ns/day\n' > temp.dat
+
+awk '($1=="Using") {printf "%d \t", $2}
+    ($2=="ns/day") {printf "%.1f \n", $1}' $out >> temp.dat
+
+
+sort -nk1 temp.dat  > $list
+
+cat $list
