@@ -1,31 +1,34 @@
 import  matplotlib.pyplot as plt
 import numpy as np
 
-
 data =  np.loadtxt('benchmarks.dat')
 
+plt.title('AA simulation on Bridges2 GPU nodes')
 plt.rc('font' , size =12)
-plt.ylabel('performance (ns/day)')
+plt.ylabel('Performance (ns/day)')
 plt.xlabel('GPUs')
 #plt.xscale("log")
 #plt.yscale("log")
 
 x=data[:,0]
-y1=data[:,1]
-y2=data[:,2]
-y4=data[:,3]
-y5=data[:,4]
+ymax=np.amax(data[:,1:],axis=1)
+
+coef = np.polyfit(x[:2],ymax[:2],1)
+fn =  np.poly1d(coef)
+
+
+
 plt.xticks([1,2,4,8])
-plt.plot(x, y1, marker='o', linewidth=2, label='1 MPI/GPU')
-plt.plot(x, y2, marker='v', linewidth=2, label='2 MPI/GPU')
-plt.plot(x, y4, marker='*', linewidth=2, label='4 MPI/GPU')
-plt.plot(x, y5, marker='s', linewidth=2, label='5 MPI/GPU')
+plt.plot(x, ymax,marker='o',  linewidth=2, label='best')
 
+x0=np.linspace(1,4,4)
+plt.plot(x0,fn(x0), '--k')
 
-plt.savefig('test_GPU.png')
-plt.legend()
-
+plt.savefig('AA-LLC-gpus.png')
 plt.show()
+plt.close()
+
+
 exit()
 
 
