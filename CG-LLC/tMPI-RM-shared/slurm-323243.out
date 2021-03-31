@@ -1,0 +1,48 @@
+                      :-) GROMACS - gmx mdrun, 2020.5 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.5
+Executable:   /jet/home/susa/pkgs/gromacs/2020.5/bin/gmx
+Data prefix:  /jet/home/susa/pkgs/gromacs/2020.5
+Working dir:  /ocean/projects/cts160011p/susa/benchmark/Bridges2/scaling_test/CG_111/threaded-RM-shared
+Command line:
+  gmx mdrun -v -s prod.tpr -o prod -g nt32_nopm1.log -nt 32 -ntomp 1
+
+Reading file prod.tpr, VERSION 2020.5 (single precision)
+Changing nstlist from 10 to 25, rlist from 1.128 to 1.272
+
+Using 32 MPI threads
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread per tMPI thread
+
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun '1x1x1 self-assemble'
+50000 steps,   1000.0 ps.
+step 0vol 0.84  imb F 19% step 100, will finish Tue Mar  2 00:35:43 2021vol 0.72  imb F  9% step 200, will finish Tue Mar  2 01:08:20 2021vol 0.70  imb F 10% step 300, will finish Tue Mar  2 01:19:21 2021vol 0.61  imb F 24% step 400, will finish Tue Mar  2 01:34:34 2021vol 0.66  imb F 11% step 500, will finish Tue Mar  2 01:37:37 2021imb F 12% step 600, will finish Tue Mar  2 01:10:45 2021imb F 15% step 700, will finish Tue Mar  2 00:51:33 2021imb F 16% step 800, will finish Tue Mar  2 00:37:08 2021imb F 13% step 900, will finish Tue Mar  2 00:25:56 2021imb F 12% step 1000, will finish Tue Mar  2 00:16:57 2021imb F 10% step 1100, will finish Tue Mar  2 00:09:37 2021imb F 15% step 1200, will finish Tue Mar  2 00:03:30 2021imb F 16% step 1300, will finish Mon Mar  1 23:58:19 2021imb F 16% step 1400, will finish Mon Mar  1 23:53:53 2021imb F 18% step 1500, will finish Mon Mar  1 23:50:02 2021imb F 18% step 1600, will finish Mon Mar  1 23:46:40 2021imb F 15% step 1700, will finish Mon Mar  1 23:43:42 2021imb F 17% step 1800, will finish Mon Mar  1 23:41:03 2021imb F 16% step 1900, will finish Mon Mar  1 23:38:42 2021imb F 15% step 2000, will finish Mon Mar  1 23:36:34 2021imb F 18% step 2100, will finish Mon Mar  1 23:34:39 2021imb F 21% step 2200, will finish Mon Mar  1 23:32:54 2021imb F 16% step 2300, will finish Mon Mar  1 23:31:18 2021imb F 13% step 2400, will finish Mon Mar  1 23:29:50 2021imb F 14% step 2500, will finish Mon Mar  1 23:28:29 2021imb F 14% step 2600, will finish Mon Mar  1 23:27:14 2021imb F 14% step 2700, will finish Mon Mar  1 23:26:05 2021imb F 14% step 2800, will finish Mon Mar  1 23:25:01 2021imb F 18% step 2900, will finish Mon Mar  1 23:24:01 2021imb F 13% step 3000, will finish Mon Mar  1 23:23:06 2021imb F 13% step 3100, will finish Mon Mar  1 23:22:22 2021imb F 13% step 3200, will finish Mon Mar  1 23:21:33 2021imb F 13% step 3300, will finish Mon Mar  1 23:20:47 2021imb F 26% step 3400, will finish Mon Mar  1 23:20:03 2021imb F 11% step 3500, will finish Mon Mar  1 23:19:22 2021imb F 13% step 3600, will finish Mon Mar  1 23:18:44 2021imb F 14% step 3700, will finish Mon Mar  1 23:18:07 2021imb F 12% step 3800, will finish Mon Mar  1 23:17:32 2021imb F 13% step 3900, will finish Mon Mar  1 23:16:59 2021imb F 13% step 4000, will finish Mon Mar  1 23:16:28 2021imb F 14% step 4100, will finish Mon Mar  1 23:15:58 2021imb F 14% step 4200, will finish Mon Mar  1 23:15:30 2021imb F 12% step 4300, will finish Mon Mar  1 23:15:03 2021imb F 12% step 4400, will finish Mon Mar  1 23:14:37 2021imb F 12% step 4500, will finish Mon Mar  1 23:14:12 2021imb F 13% step 4600, will finish Mon Mar  1 23:13:49 2021imb F 13% step 4700, will finish Mon Mar  1 23:13:26 2021imb F 13% step 4800, will finish Mon Mar  1 23:13:05 2021imb F 14% step 4900, will finish Mon Mar  1 23:12:44 2021imb F 15% step 5000, will finish Mon Mar  1 23:12:24 2021vol 0.80  imb F 12% step 5100, will finish Mon Mar  1 23:13:07 2021vol 0.73  imb F 18% step 5200, will finish Mon Mar  1 23:14:45 2021vol 0.56  imb F 27% step 5300, will finish Mon Mar  1 23:15:51 2021vol 0.52  imb F 16% step 5400, will finish Mon Mar  1 23:17:19 2021vol 0.45  imb F 31% step 5500, will finish Mon Mar  1 23:19:01 2021imb F 25% step 5600, will finish Mon Mar  1 23:20:40 2021imb F 31% step 5700, will finish Mon Mar  1 23:22:16 2021imb F 12% step 5800, will finish Mon Mar  1 23:26:18 2021imb F 18% step 5900, will finish Mon Mar  1 23:30:09 2021imb F 17% step 6000, will finish Mon Mar  1 23:33:17 2021imb F 38% step 6100, will finish Mon Mar  1 23:34:53 2021imb F 18% step 6200, will finish Mon Mar  1 23:36:54 2021imb F 33% step 6300, will finish Mon Mar  1 23:40:27 2021imb F 15% step 6400, will finish Mon Mar  1 23:44:45 2021imb F 12% step 6500, will finish Mon Mar  1 23:48:41 2021imb F 10% step 6600, will finish Mon Mar  1 23:50:43 2021imb F 18% step 6700, will finish Mon Mar  1 23:52:09 2021imb F 13% step 6800, will finish Mon Mar  1 23:54:16 2021imb F 15% step 6900, will finish Mon Mar  1 23:56:19 2021imb F 14% step 7000, will finish Mon Mar  1 23:57:57 2021imb F 19% step 7100, will finish Mon Mar  1 23:58:51 2021imb F 18% step 7200, will finish Mon Mar  1 23:59:48 2021imb F 19% step 7300, will finish Tue Mar  2 00:02:44 2021imb F 16% step 7400, will finish Tue Mar  2 00:03:52 2021slurmstepd: error: *** JOB 323243 ON r017 CANCELLED AT 2021-03-01T23:06:04 DUE TO TIME LIMIT ***

@@ -1,0 +1,7 @@
+[moleculetype]
+; molname      nrexcl
+  GLC           1
+
+[atoms]
+; id 	type 	resnr 	residu 	atom 	cgnr 	charge
+   1 	P3 	 1 	GLC 	GLC 	 1      0       

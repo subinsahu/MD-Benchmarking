@@ -1,0 +1,54 @@
+                      :-) GROMACS - gmx grompp, 2020.5 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2020.5
+Executable:   /jet/home/susa/pkgs/gromacs/2020.5/bin/gmx
+Data prefix:  /jet/home/susa/pkgs/gromacs/2020.5
+Working dir:  /ocean/projects/cts160011p/susa/benchmark/Bridges2/scaling_test/CG_111/threaded
+Command line:
+  gmx grompp -f ../prod.mdp -p ../itw_large.top -c ../prod_0.gro -o prod
+
+Setting the LD random seed to -1104681246
+Generated 71 of the 6670 non-bonded parameter combinations
+Excluding 1 bonded neighbours molecule type 'ITW'
+Excluding 1 bonded neighbours molecule type 'TCL'
+Excluding 1 bonded neighbours molecule type 'GLC'
+Number of degrees of freedom in T-Coupling group System is 24132.00
+
+GROMACS reminds you: "Beat On the Brat With a Baseball Bat" (The Ramones)
+
+Analysing residue names:
+There are:  3521      Other residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.179 nm, buffer size 0.079 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.128 nm, buffer size 0.028 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+This run will generate roughly 1 Mb of data
+/var/spool/slurm/d/job323158/slurm_script: line 15: syntax error near unexpected token `('
+/var/spool/slurm/d/job323158/slurm_script: line 15: ` gmx mdrun -v -s prod.tpr -o prod -g nt128_nopm1.log -nt 128  -ntomp 1 (error)'

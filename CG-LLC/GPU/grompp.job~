@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -N 1 --ntasks-per-node 40
+#SBATCH -t 0:30:00
+#SBATCH -p GPU-shared --gres=gpu:8
+#SBATCH -J 'test'
+
+module load cuda
+module load gcc/10.2.0
+module load openmpi/3.1.6-gcc10.2.0
+source /jet/home/susa/pkgs/gromacs/2020.5_gpu/bin/GMXRC
+
+
+export GMX_MAXBACKUP=-1  # do not make back-ups
+export GMX_MAXCONSTRWARN=-1
+
+mpirun -np 1 gmx_mpi grompp -f ../prod.mdp -p ../itw_large.top -c ../selfassembly_prod.gro -o prod
+#mpirun -np 16 gmx_mpi mdrun -v -s prod.tpr -o prod -g G4_np16_nomp1.log -ntomp 1
+#mpirun -np 8 gmx_mpi mdrun -v -s prod.tpr -o prod -g G4_np8_nomp2.log -ntomp 2
+#mpirun -np 4 gmx_mpi mdrun -v -s prod.tpr -o prod -g G4_np4_nomp4.log -ntomp 4
+
+#mpirun -np 2 gmx_mpi mdrun -v -s prod.tpr -o prod -g G2_np2_nomp4.log -ntomp 4
+#mpirun -np 1 gmx_mpi mdrun -v -s prod.tpr -o prod -g G2_np1_nomp8.log -ntomp 8
+
+mpirun -np 2 gmx_mpi mdrun -v -s prod.tpr -o prod -g G1_np2_nomp2.log -ntomp 2
+mpirun -np 1 gmx_mpi mdrun -v -s prod.tpr -o prod -g G1_np1_nomp4.log -ntomp 4
+
+
+
+

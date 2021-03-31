@@ -1,0 +1,13 @@
+#include "top/martini_v3.0.b.3.2.itp"
+#include "top/martini_v3.0_ions.itp"
+#include "top/itw.itp"
+#include "top/glc.itp"
+[ system ]
+; name
+1x1x1 self-assemble
+
+[ molecules ]
+; name        number
+ITW 	       377
+TCL            754
+GLC           2390

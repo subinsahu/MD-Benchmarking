@@ -1,0 +1,30 @@
+.........................
+
+Using 16 MPI threads
+2301.3 ns/day
+.........................  
+
+Using 1 MPI thread
+706.5 ns/day
+.........................  
+
+Using 2 MPI threads
+1155.4 ns/day
+.........................  
+
+Using 32 MPI threads
+7218.2 ns/day
+.........................  
+
+Using 4 MPI threads
+1902.8 ns/day
+.........................  
+
+Using 64 MPI threads
+9637.2 ns/day
+.........................  
+
+Using 8 MPI threads
+3340.4 ns/day
+.........................  
+

@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -N 1 --ntasks-per-node 128
+#SBATCH -t 0:20:00
+#SBATCH -p RM
+#SBATCH -J 'test'
+
+
+module load gcc/10.2.0
+module load openmpi/3.1.6-gcc10.2.0
+source /jet/home/susa/pkgs/gromacs/2020.5_cpu/bin/GMXRC
+
+
+export GMX_MAXBACKUP=-1  # do not make back-ups
+export GMX_MAXCONSTRWARN=-1
+
+
+#mpirun -np 1 gmx_mpi grompp -f ../prod.mdp -p ../itw_large.top -c ../prod_0.gro -o prod
+mpirun -np 128 gmx_mpi mdrun -v -s prod.tpr -o prod -g N1_np128_nomp1.log -ntomp 1
+#mpirun -np 64 gmx_mpi mdrun -v -s prod.tpr -o prod -g N1_np64_nomp1.log -ntomp 1
+#mpirun -np 32 gmx_mpi mdrun -v -s prod.tpr -o prod -g N1_np32_nomp1.log -ntomp 1
+#mpirun -np 16 gmx_mpi mdrun -v -s prod.tpr -o prod -g N1_np16_nomp1.log -ntomp 1
+#mpirun -np 8 gmx_mpi mdrun -v -s prod.tpr -o prod -g N1_np8_nomp1.log -ntomp 1
+#mpirun -np 4 gmx_mpi mdrun -v -s prod.tpr -o prod -g N1_np4_nomp1.log -ntomp 1
+#mpirun -np 2 gmx_mpi mdrun -v -s prod.tpr -o prod -g N1_np2_nomp1.log -ntomp 1
+#mpirun -np 1  gmx_mpi mdrun -v -s prod.tpr -o prod -g N1_np1_nomp1.log  -ntomp 1
+
